@@ -27,6 +27,10 @@ requirements:
 test:
   imports:
     - altair_viewer
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: "http://github.com/altair-viz/altair_viewer/"
