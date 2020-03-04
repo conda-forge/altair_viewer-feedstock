@@ -1,18 +1,18 @@
 {% set name = "altair_viewer" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: ddd3fa283afdbfd3eb53115b8c1779e1d17ea0a6679eb41a7cd4593e39879ca4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f8614dea5e55b26fd7999beb72f606a043788d92435eaa1db388214066346a6a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -33,11 +33,11 @@ test:
     - pip check
 
 about:
-  home: "http://github.com/altair-viz/altair_viewer/"
+  home: http://github.com/altair-viz/altair_viewer/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Viewer for Altair and Vega-Lite visualizations."
+  summary: Viewer for Altair and Vega-Lite visualizations.
 
 extra:
   recipe-maintainers:
