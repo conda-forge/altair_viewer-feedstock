@@ -1,5 +1,5 @@
 {% set name = "altair_viewer" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f8614dea5e55b26fd7999beb72f606a043788d92435eaa1db388214066346a6a
+  sha256: 2964dbde6b7c5be723ddd9d509db4de67c9fb4c765d4e864087dc931c4524439
 
 build:
   number: 0
